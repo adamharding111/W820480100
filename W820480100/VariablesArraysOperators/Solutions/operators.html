@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+  const rockStars = [];
+  const songTotals = [];
+  rockStars[0] = prompt("Who is your favorite rock star?", "");
+  songTotals[0] = prompt("How many " + rockStars[0] + 
+                         " songs do you have?", "");
+  rockStars[1] = prompt("And your next favorite rock star?", "");
+  songTotals[1] = prompt("How many " + rockStars[1] +
+                         " songs do you have?", "");
+</script>
+<title>JavaScript Operators</title>
+</head>
+<body>
+<main>
+  <script>
+  const diff = songTotals[0] - songTotals[1];
+  document.write("You have " + diff + " more songs of " + rockStars[0]);
+  document.write(" than you have of " + rockStars[1] + ".");
+  </script>
+</main>
+</body>
+</html>

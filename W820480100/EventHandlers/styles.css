@@ -1,0 +1,30 @@
+main {
+  font-size: 16pt;
+  margin: 20px auto;
+  max-width: 400px;
+  text-align: center;
+}
+
+ul,
+ol {
+  text-align: left;
+}
+
+button {
+  margin: 10px;
+  width: 100%;
+}
+
+#typing-test #message {
+  font-weight: bold;
+}
+
+#typing-test #sentence,
+#typing-test #entry {
+  font-size:15pt;
+  width:400px;
+}
+
+#keyholder {
+  font-size: 1in;
+}

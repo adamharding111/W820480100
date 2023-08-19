@@ -1,0 +1,53 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  font: 1rem/1.3 Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+#welcome {
+  font-size: larger;
+}
+
+#welcome h1 {
+  color: rgb(8, 5, 211);
+  text-shadow: 0.2rem 0.2rem 0.1rem rgb(211, 200, 238);
+}
+
+article {
+  text-align: center;
+}
+
+article h2 {
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
+  word-spacing: 0.2em;
+}
+
+article p {
+  line-height: 2;
+  text-align: left;
+  text-indent: 3rem;
+}
+
+.read-more {
+  text-decoration: none;
+}
+
+aside label {
+  font-weight: bold;
+}
+
+#newsletter {
+  text-align: right;
+}
+
+footer {
+  font-size: smaller;
+  font-style: italic;
+}

@@ -1,0 +1,35 @@
+.biggest {
+  font-size: xx-large;
+}
+
+.second-biggest {
+  font-size: x-large;
+}
+
+.third-biggest {
+  font-size: large;
+}
+
+.medium {
+  font-size: medium;
+}
+
+.third-smallest {
+  font-size: small;
+}
+
+.second-smallest {
+  font-size: x-small;
+}
+
+.smallest {
+  font-size: xx-small;
+}
+
+.larger {
+  font-size: larger;
+}
+
+.smaller {
+  font-size: smaller;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Normalize Test</title>
+<!-- <link href="normalize.css" rel="stylesheet"> -->
+<!-- <link href="../normalize.css" rel="stylesheet"> -->
+</head>
+<body class="webucator">
+  <form id="iceCreamForm">
+    <div>
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName">
+    </div>
+    <div>
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName">
+    </div>
+    <div>
+      <label for="flavor">Flavor:</label>
+      <select name="flavor" id="flavor">
+        <option value="0"></option>
+        <optgroup label="Soft Flavors">
+          <option value="softChoc">Chocolate</option>
+          <option value="softStraw">Strawberry</option>
+          <option value="softVan">Vanilla</option>
+        </optgroup>
+        <optgroup label="Hard Flavors">
+          <option value="hardChoc">Chocolate</option>
+          <option value="hardStraw">Strawberry</option>
+          <option value="hardVan">Vanilla</option>
+          <option value="hardMint">Mint Chocolate Chip</option>
+          <option value="hardCC">Cookies &amp; Cream</option>
+        </optgroup>
+      </select>
+    </div>
+    <div>
+    Toppings:
+      <input type="checkbox" name="sprinkles" id="sprinkles"> <label for="sprinkles">Sprinkles</label>
+      <input type="checkbox" name="nuts" id="nuts"> <label for="nuts">Nuts</label>
+      <input type="checkbox" name="whip" id="whip"> <label for="whip">Whipped Cream</label>
+    </div>
+    <div>
+      Cup or Cone?
+      <label><input type="radio" name="container" value="cup"> Cup</label>
+      <label><input type="radio" name="container" value="plaincone"> Plain cone</label>
+      <label><input type="radio" name="container" value="sugarcone"> Sugar cone</label>
+      <label><input type="radio" name="container" value="wafflecone"> Waffle cone</label><br>
+    </div>
+    <div>
+      <input name="submitbutton" id="submitbutton" type="submit" value="Place Order">
+      <input name="resetbutton" id="resetbutton" type="reset" value="Reset Form">
+    </div>
+  </form>
+</body>
+</html>

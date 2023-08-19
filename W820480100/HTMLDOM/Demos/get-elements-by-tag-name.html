@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+window.addEventListener('load', function() {
+  const elems = document.getElementsByTagName('li');
+  let msg = "";
+  for (let elem of elems) {
+    msg += elem.innerHTML + "\n";
+  }
+  alert(msg);
+});
+</script>
+<title>getElementsByTagName()</title>
+</head>
+<body>
+<main>
+  <h1>Rockbands</h1>
+  <h2>Beatles</h2>
+  <ol>
+    <li>Paul</li>
+    <li>John</li>
+    <li>George</li>
+    <li>Ringo</li>
+  </ol>
+  <h2>Rolling Stones</h2>
+  <ol>
+    <li>Mick</li>
+    <li>Keith</li>
+    <li>Charlie</li>
+    <li>Bill</li>
+  </ol>
+</main>
+</body>
+</html>

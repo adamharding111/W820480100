@@ -1,0 +1,19 @@
+h2 {
+  color: blue;
+}
+
+article h2 {
+  color: inherit;
+}
+
+#article-red {
+  color: red;
+}
+
+#article-green {
+  color: green;
+}
+
+#article-purple {
+  color: purple;
+}

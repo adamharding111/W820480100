@@ -1,0 +1,15 @@
+#normal {
+  letter-spacing: normal;
+}
+
+#wide {
+  letter-spacing: 0.2rem;
+}
+
+#wider {
+  letter-spacing: 0.4rem;
+}
+
+#widest {
+  letter-spacing: 0.6rem;
+}

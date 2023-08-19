@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<title>Phone Cleaner</title>
+<script>
+function cleanPhone(phone) {
+  const rePhone = RegExp(phone.pattern);
+  const phoneNum = phone.value;
+  const cleanedPhone = phoneNum.replace(rePhone, "($1) $2-$3");
+  if (rePhone.test(phoneNum)) {
+    return cleanedPhone;
+  } else {
+    alert("INVALID PHONE");
+    return phoneNum;
+  }
+}
+
+window.addEventListener('load', function(e) {
+  const btn = document.getElementById('clean');
+  const phone = document.getElementById('phone');
+  btn.addEventListener('click', function(e) {
+    phone.value = cleanPhone(phone);
+    e.preventDefault(); // prevent form submission
+  });
+});
+</script>
+</head>
+<body>
+  <form>
+    <input type="tel" id="phone" name="phone" size="20"
+    pattern="^\(?(\d{3})\)?[\-\. ]?(\d{3})[\-\. ]?(\d{4})$">
+    <button id="clean">Clean Phone</button>
+  </form>
+</body>
+</html>

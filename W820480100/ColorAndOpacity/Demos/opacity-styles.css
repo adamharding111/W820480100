@@ -1,0 +1,27 @@
+#my-div {
+  /* To make the changes in opacity
+  easier to see, we have added a yellow
+  background color and made the text red */
+  background-color: yellow;
+  color: red;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.light {
+  opacity: .25;
+}
+
+.medium {
+  opacity: .5;
+}
+
+.heavy {
+  opacity: .75;
+}
+
+.opaque {
+  opacity: 1;
+}

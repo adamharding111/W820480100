@@ -1,0 +1,37 @@
+html {
+  font-family:'Segoe UI', 'Open Sans', 
+  'Helvetica Neue', sans-serif;
+}
+#div1 {
+  font-weight: normal;
+}
+#div2 {
+  font-weight: bold;
+}
+#div3 {
+  font-weight: 400;
+}
+#div4 {
+  font-weight: 1000;
+}
+.bolder {
+  font-weight: bolder;
+}
+.lighter {
+  font-weight: lighter;
+}
+#li1 {
+  font-weight: 100;
+}
+#li2 {
+  font-weight: 400;
+}
+#li3 {
+  font-weight: 600;
+}
+#li4 {
+  font-weight: 700;
+}
+#li5 {
+  font-weight: 900;
+}

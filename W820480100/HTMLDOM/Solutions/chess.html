@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+  function init() {
+    let row = 0;
+    for (let i=0; i < 64; i++) {
+      const div = document.createElement('div');
+      div.style.height = '60px';
+      div.style.width = '60px';
+      div.style.float = 'left';
+      div.style.border = '1px solid black';
+
+      if (i % 8 === 0) {
+        div.style.clear = 'left';
+        div.classList.add('left');
+        row++;
+      }
+
+      if ((i + row) % 2 === 0) {
+        div.style.backgroundColor = 'black';
+      }
+
+      document.body.appendChild(div);
+    }
+
+    addLetters('top');
+    addLetters('bottom');
+    addNumbers('left');
+    addNumbers('right');
+  }
+
+  function addLetters(location='top') {
+    const letters = ['A','B','C','D','E','F','G','H'];
+    for (let i=0; i<8; i++) {
+      const div = document.createElement('div');
+      div.style.width = '60px';
+      div.style.height = '20px';
+      div.style.float = 'left';
+      div.style.color = 'gray';
+      div.style.textAlign = 'center';
+      div.style.border = '1px solid black';
+      if (location === 'top') {
+        div.innerHTML = letters[i];
+        const sqFirst = document.getElementsByTagName('div')[0];
+        document.body.insertBefore(div, sqFirst);
+        if (i === 7) {
+          div.style.clear = 'left';
+          div.classList.add('left');
+        }
+      } else {
+        div.innerHTML = letters[7-i];
+        document.body.append(div);
+        if (i === 0) {
+          div.style.clear = 'left';
+          div.classList.add('left');
+        }
+      }
+    }
+  }
+
+  function addNumbers(position = 'left') {
+    const firstCells = document.getElementsByClassName('left');
+    const numbers = ['','1','2','3','4','5','6','7','8',''];
+    let i = 0;
+    let skippedFirst = false;
+    for (cell of firstCells) {
+      if (position === 'right' && !skippedFirst) {
+        skippedFirst = true;
+        continue;
+      }
+      const div = document.createElement('div');
+      if (position === 'left') {
+        cell.classList.remove('left');
+        cell.style.clear = 'none';
+        div.classList.add('left');
+        div.style.clear = 'left';
+      }
+      div.style.width = '20px';
+      if (i === 0 || i === 9) {
+        div.style.height = '20px';
+      } else {
+        div.style.height = '60px';
+      }
+      div.style.float = 'left';
+      div.style.color = 'gray';
+      div.style.textAlign = 'center';
+      div.style.border = '1px solid black';
+      div.innerHTML = numbers[i];
+      document.body.insertBefore(div,cell);
+      i++;
+    }
+    if (position === 'right') {
+      const div = document.createElement('div');
+      div.style.height = '20px';
+      div.style.width = '20px';
+      div.style.border = '1px solid black';
+      div.style.float = 'left';
+      document.body.appendChild(div);
+    }
+  }
+  
+  window.addEventListener('load', init);
+</script>
+<title>Chess</title>
+</head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+  //Pop up a prompt
+  let userColor = window.prompt("Enter a color.", "");
+</script>
+<title>JavaScript Variables</title>
+</head>
+<body>
+<main>
+  <button onclick="document.body.style.backgroundColor = 'red';">
+    Red
+  </button>
+  <button onclick="document.body.style.backgroundColor = 'white';">
+    White
+  </button>
+  <button onclick="document.body.style.backgroundColor = 'green';">
+    Green
+  </button>
+  <button onclick="document.body.style.backgroundColor = 'blue';">
+    Blue
+  </button>
+  <button onclick="document.body.style.backgroundColor = userColor;">
+  <script>
+    document.write(userColor);
+  </script>
+  </button>
+</main>
+</body>
+</html>

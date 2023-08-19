@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  main {
+    max-width:800px;
+    font-size: 18px;
+  }
+</style>
+<title>Date</title>
+</head>
+<body>
+<main>
+  <script>
+    const now = new Date();
+    const moonLanding1 = new Date('July 21, 1969, 16:18:00');
+    const moonLanding2 = new Date(1969, 6, 21, 16, 18, 0, 0); // July = 6!
+    const late1969date = new Date(1969, 11, 20, 4, 40, 0, 0);
+
+    document.write("Now: " + now + "<br>");
+    document.write("Moon Landing 1: " + moonLanding1 + "<br>");
+    document.write("Moon Landing 2: " + moonLanding2 + "<br>");
+    document.write("Late 1969 date: " + late1969date + "<br>");
+
+    document.write("<hr>");
+
+    document.write("now.getDate(): " + now.getDate() + "<br>");
+    document.write("moonLanding1.getDay(): " + moonLanding1.getDay() + "<br>");
+    document.write("late1969date.getMonth(): " + late1969date.getMonth() + "<br>");
+
+    document.write("<hr>");
+
+    document.write("now.toLocaleDateString(): " + now.toLocaleDateString() + "<br>");
+    document.write("moonLanding2.toLocaleString(): " + moonLanding2.toLocaleString() + "<br>");
+    document.write("late1969date.toGMTString(): " + late1969date.toGMTString() + "<br>");
+    
+  </script>
+</main>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+function greetUser() {
+  let dominantHand;
+  let lastName;
+  let greeting;
+  const presidents = ["Washington", "Jefferson", "Lincoln", "Kennedy"];
+  
+  dominantHand = prompt("Are you left- or right-handed?", "") || "";
+  dominantHand = dominantHand.toLowerCase();
+  while (dominantHand !== "right" && dominantHand !== "left") {
+    dominantHand = prompt("Try again: right or left?", "") || "";
+  }
+  
+  do {
+    lastName = prompt("What's your last name?", "") || "";
+  } while (lastName.length === 0
+      || !isNaN(lastName)
+      || lastName.substring(0, 1) === lastName.substring(0, 1).toLowerCase())
+  
+    switch (dominantHand) {
+      case "right" :
+        greeting = "Hello Righty " + lastName + "!";
+        break;
+      default : // If not right, must be left
+        greeting = "Hello Lefty " + lastName + "!";
+  }
+
+  let match = false;
+  for (let lName of presidents) {
+    if (lName === lastName) {
+      alert(greeting + ' Your name is presidential!');
+      match = true;
+      break; // No need to keep looking after we've found a match
+    }
+  }
+  if (!match) {
+    alert(greeting + ' Your name is not presidential!');
+  }
+}
+</script>
+<title>Loops - Challenge</title>
+</head>
+<body>
+<main>
+  <button onclick="greetUser();">Greet User</button>
+</main>
+</body>
+</html>

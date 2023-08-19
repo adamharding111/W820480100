@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+function changeBg(id, color) {
+  document.getElementById(id).style.backgroundColor = color;
+}
+</script>
+<title>getElementById()</title>
+</head>
+<body>
+<main>
+  <button onclick="changeBg('divRed','red')">Red</button>
+  <button onclick="changeBg('divOrange','orange')">Orange</button>
+  <button onclick="changeBg('divGreen','green')">Green</button>
+  <button onclick="changeBg('divBlue','blue')">Blue</button>
+  <div id="divRed">Red</div>
+  <div id="divOrange">Orange</div>
+  <div id="divGreen">Green</div>
+  <div id="divBlue">Blue</div>
+</main>
+</body>
+</html>

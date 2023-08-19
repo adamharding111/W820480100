@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+function greetUser() {
+  let dominantHand;
+  let lastName;
+  
+  dominantHand = prompt("Are you left- or right-handed?", "") || "";
+  dominantHand = dominantHand.toLowerCase();
+  if (dominantHand !== "right" && dominantHand !== "left") {
+    dominantHand = prompt("Try again: right or left?", "") || "";
+  }
+  
+  lastName = prompt("What's your last name?", "") || "";
+  const firstLetter = lastName.substring(0, 1);
+  if (lastName.length === 0) {
+    lastName = prompt("No last name? Please re-enter:", "") || "";
+  } else if (!isNaN(lastName)) {
+    lastName = prompt("Names aren't numbers. Re-enter:", "") || "";
+  } else if (firstLetter === firstLetter.toLowerCase()) {
+    lastName = prompt("Names begin with capital letters.  Re-enter:", "") || "";
+  }
+  
+  switch (dominantHand) {
+    case "right" :
+      alert("Hello Righty " + lastName + "!");
+      break;
+    case "left" :
+      alert("Hello Lefty " + lastName + "!");
+      break;
+    default :
+      alert(dominantHand + " is not a valid value for dominant hand!");
+  }
+}
+</script>
+<title>Loops</title>
+</head>
+<body>
+<main>
+  <button onclick="greetUser();">Greet User</button>
+</main>
+</body>
+</html>

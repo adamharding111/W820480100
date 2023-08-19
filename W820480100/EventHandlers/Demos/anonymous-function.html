@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+  function changeBg(e) {
+    const color = e.currentTarget.id;
+    document.body.style.backgroundColor = color;
+  }
+
+  window.addEventListener('load', function(e) {
+    const aqua = document.getElementById('aqua');
+    const lime = document.getElementById('lime');
+    const pink = document.getElementById('pink');
+    aqua.addEventListener('click', changeBg);
+    lime.addEventListener('click', changeBg);
+    pink.addEventListener('click', changeBg);
+  });
+</script>
+<title>Anonymous Function</title>
+</head>
+<body>
+<main>
+  <button id="aqua">Aqua</button>
+  <button id="lime">Lime</button>
+  <button id="pink">Pink</button>
+</main>
+</body>
+</html>

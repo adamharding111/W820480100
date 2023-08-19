@@ -1,0 +1,24 @@
+main {
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+p {
+  font-size: 16pt;
+}
+
+button {
+  font-size: 16pt;
+  margin: 10px;
+  width: 100%;
+}
+
+#resize-box div {
+  background-color:blue;
+  margin: auto;
+}
+
+#resize-box button {
+  margin-left: 30px; 
+  width: 150px;
+}

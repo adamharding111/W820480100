@@ -1,0 +1,15 @@
+.indent-length {
+  text-indent: 3em;
+}
+
+.indent-percentage {
+  text-indent: 10%;
+}
+
+.outdent-length {
+  text-indent: -3em;
+}
+
+.outdent-percentage {
+  text-indent: -10%;
+}

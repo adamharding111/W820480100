@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+function setBgColor() {
+  const bg = prompt("Set Background Color:", "");
+  document.body.style.backgroundColor = bg; 
+}
+
+function getBgColor() {
+  return document.body.style.backgroundColor;
+}
+</script>
+<title>Returning a Value</title>
+</head>
+<body>
+  <button onclick="setBgColor()">Set Background Color</button>
+  <button onclick="alert(getBgColor())">Get Background Color</button>
+</body>
+</html>

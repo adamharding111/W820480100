@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+  function checkAge() {
+    const age = prompt("Your age?", "") || "";
+    
+    if (age >= 21) {
+      alert("You can vote and drink!");
+    } else if (age >= 18) {
+      alert("You can vote, but can't drink.");
+    } else {
+      alert("You cannot vote or drink.");
+    }
+  }
+</script>
+<title>JavaScript Conditionals Demo</title>
+</head>
+<body>
+<main>
+  <h1>JavaScript if - else if - else Demo</h1>
+  <h2>Age Check</h2>
+  <button onclick="checkAge()">Age Check</button>
+</main>
+</body>
+</html>

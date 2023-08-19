@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+  function create() {
+    const board = document.getElementById('board');
+    const topRow = board.firstElementChild;
+    const trLeftCol = topRow.firstElementChild;
+    trLeftCol.style.backgroundColor='rgba(0, 255, 255, .5)';
+    const trCenterCol = trLeftCol.nextElementSibling;
+    trCenterCol.style.backgroundColor='rgba(102, 255, 255, .5)';
+    const trRightCol = topRow.lastElementChild;
+    trRightCol.style.backgroundColor='rgba(204, 255, 255, .5)';
+
+    const middleRow = topRow.nextElementSibling;
+    const mrLeftCol = middleRow.firstElementChild;
+    mrLeftCol.style.backgroundColor='rgba(255, 0, 255, .5)';
+    const mrCenterCol = mrLeftCol.nextElementSibling;
+    mrCenterCol.style.backgroundColor='rgba(255, 102, 255, .5)';
+    const mrRightCol = middleRow.lastElementChild;
+    mrRightCol.style.backgroundColor='rgba(255, 204, 255, .5)';
+
+    const bottomRow = board.lastElementChild;
+    const brLeftCol = bottomRow.firstElementChild;
+    brLeftCol.style.backgroundColor='rgba(255, 255, 0, .5)';
+    const brCenterCol = brLeftCol.nextElementSibling;
+    brCenterCol.style.backgroundColor='rgba(255, 255, 102, .5)';
+    const brRightCol = bottomRow.lastElementChild;
+    brRightCol.style.backgroundColor='rgba(255, 255, 204, .5)';
+  }
+
+  window.addEventListener('load', function() {
+    const goBtn = document.getElementById('btn-go');
+    goBtn.addEventListener('click', create);
+  });
+</script>
+<title>Element Hierarchy</title>
+</head>
+<body>
+<main>
+  <button id="btn-go">Go</button>
+  <div id="board">
+    <div class="row">
+      <div class="col">A</div>
+      <div class="col">B</div>
+      <div class="col">C</div>
+    </div>
+    <div class="row">
+      <div class="col">D</div>
+      <div class="col">E</div>
+      <div class="col">F</div>
+    </div>
+    <div class="row">
+      <div class="col">G</div>
+      <div class="col">H</div>
+      <div class="col">I</div>
+    </div>
+  </div>
+</main>
+</body>
+</html>

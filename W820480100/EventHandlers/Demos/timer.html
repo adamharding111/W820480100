@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+  // Create global timer variable
+  let timer;
+
+  function changeBg(e) {
+    const color = e.currentTarget.id;
+    timer = setTimeout(function() {
+      document.body.style.backgroundColor=color;
+    }, 1000);
+  }
+  
+  function stopTimer() {
+    clearTimeout(timer);
+    alert('Timer cleared!');
+  }
+
+  window.addEventListener('load', function() {
+    btnRed = document.getElementById('red');
+    btnWhite = document.getElementById('white');
+    btnStop = document.getElementById('stop');
+
+    btnRed.addEventListener('click', changeBg);
+    btnWhite.addEventListener('click', changeBg);
+    btnStop.addEventListener('click', stopTimer);
+  });
+</script>
+<title>Timer</title>
+</head>
+<body>
+<main>
+  <button id="red">Change Background to Red</button>
+  <button id="white">Change Background to White</button>
+  <button id="stop">Wait! Don't do it!</button>
+</main>
+</body>
+</html>

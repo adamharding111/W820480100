@@ -1,0 +1,15 @@
+#none {
+  text-transform: none;
+}
+
+#caps {
+  text-transform: capitalize;
+}
+
+#lower {
+  text-transform: lowercase;
+}
+
+#upper {
+  text-transform: uppercase;
+}

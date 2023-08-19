@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+  //Pop up four prompts and create an array
+  const colors = new Array();
+  colors[0] = prompt("Choose a color.", "");
+  colors[1] = prompt("Choose a color.", "");
+  colors[2] = prompt("Choose a color.", "");
+  colors[3] = prompt("Choose a color.", "");
+</script>
+<title>JavaScript Arrays</title>
+</head>
+<body>
+<main>
+  <button onclick="document.body.style.backgroundColor = colors[0];">
+    <script>
+      document.write(colors[0]);
+    </script>
+  </button>
+  <button onclick="document.body.style.backgroundColor = colors[1];">
+    <script>
+      document.write(colors[1]);
+    </script>
+  </button>
+  <button onclick="document.body.style.backgroundColor = colors[2];">
+    <script>
+      document.write(colors[2]);
+    </script>
+  </button>
+  <button onclick="document.body.style.backgroundColor = colors[3];">
+    <script>
+      document.write(colors[3]);
+    </script>
+  </button>
+</main>
+</body>
+</html>

@@ -1,0 +1,15 @@
+#normal {
+  word-spacing: normal;
+}
+
+#wide {
+  word-spacing: 0.5rem;
+}
+
+#wider {
+  word-spacing: 1rem;
+}
+
+#widest {
+  word-spacing: 1.5rem;
+}

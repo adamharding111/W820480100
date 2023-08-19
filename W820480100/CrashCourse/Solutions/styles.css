@@ -1,0 +1,52 @@
+body {
+  background-attachment: fixed;
+  background-image: url(images/baseball.png);
+  background-position: bottom;
+  background-repeat: repeat-x;
+}
+
+table {
+  background-color: white;
+  border-collapse: collapse;
+  margin: auto;
+  min-width: 800px;
+}
+
+caption {
+  font-style: italic;
+}
+
+thead {
+  background-color: darkblue;
+  color: white;
+}
+
+td,
+th {
+  border: 1px solid orange;
+  margin: 0;
+  padding: .3em;
+}
+
+tfoot td {
+  background-color: silver;
+  border-top: 2px solid black;
+  font-weight: bold;
+}
+
+.steroids-era {
+  font-style: italic;
+}
+
+#key {
+  background-color: lightgray;
+  font-style: italic;
+}
+
+tr td:nth-child(2) {
+  text-align: center;
+}
+
+.steroids-era td:first-child::after {
+  content: '*';
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+  const num = parseInt(prompt("Enter a number.",""));
+  
+  //without ternary
+  if (num % 2 === 0) {
+    alert(num + " is even.");
+  } else {
+    alert(num + " is odd.");
+  }
+  
+  //with ternary
+  const term = num % 2 === 0 ? "even" : "odd";
+  alert(num + " is " + term);
+</script>
+<title>Ternary Operator</title>
+</head>
+<body>
+<main>
+  <p>Nothing to show here.</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+  function monthAsString(num) {
+    const months = ["January", "February", "March", "April", 
+          "May", "June", "July", "August", "September",
+          "October", "November", "December"];
+    return months[num-1];
+  }
+
+  function enterMonth() {
+    const userMonth = prompt("What month were you born?", "");
+    alert("You were born in " + monthAsString(userMonth) + ".");
+  }
+  
+  function getCurrentMonth() {
+    const today = new Date();
+    alert(monthAsString(today.getMonth()+1));
+  }
+</script>
+<title>Month As String</title>
+</head>
+<body>
+<main>
+  <button onclick="enterMonth()">CHOOSE MONTH</button>
+  <button onclick="getCurrentMonth()">GET CURRENT MONTH</button>
+</main>
+</body>
+</html>

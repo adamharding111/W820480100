@@ -1,0 +1,11 @@
+.warning {
+  color: red;
+}
+
+h1.warning {
+  text-decoration: underline;
+}
+
+p.warning {
+  font-weight: bold;
+}

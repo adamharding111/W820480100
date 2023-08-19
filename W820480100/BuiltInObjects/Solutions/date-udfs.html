@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+  function monthAsString(num) {
+    const months = [];
+    months[0] = "January";
+    months[1] = "February";
+    months[2] = "March";
+    months[3] = "April";
+    months[4] = "May";
+    months[5] = "June";
+    months[6] = "July";
+    months[7] = "August";
+    months[8] = "September";
+    months[9] = "October";
+    months[10] = "November";
+    months[11] = "December";
+    
+    return months[num-1];
+  }
+
+  function dayAsString(num) {
+    const weekDays = [];
+    weekDays[0] = "Sunday";
+    weekDays[1] = "Monday";
+    weekDays[2] = "Tuesday";
+    weekDays[3] = "Wednesday";
+    weekDays[4] = "Thursday";
+    weekDays[5] = "Friday";
+    weekDays[6] = "Saturday";
+    
+    return weekDays[num-1];
+  }
+  
+  function enterMonth() {
+    const userMonth = prompt("What month were you born?", "");
+    alert("You were born in " + monthAsString(userMonth) + ".");
+  }
+
+  function getCurrentMonth() {
+    const today = new Date();
+    alert(monthAsString(today.getMonth()+1));
+  }
+  
+  function enterDay() {
+    const userDay = prompt("What day of the week is it?", "");
+    alert("Today is " + dayAsString(userDay) + ".");
+  }
+
+  function getCurrentDay() {
+    const today = new Date();
+    alert(dayAsString(today.getDay()+1));
+  }
+</script>
+<title>Date UDFs</title>
+</head>
+<body>
+<main>
+  <button onclick="enterMonth()">CHOOSE MONTH</button>
+  <button onclick="getCurrentMonth()">GET CURRENT MONTH</button>
+  <hr>
+  <button onclick="enterDay()">CHOOSE DAY</button>
+  <button onclick="getCurrentDay()">GET CURRENT DAY</button>
+</main>
+</body>
+</html>

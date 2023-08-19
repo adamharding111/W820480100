@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  main {
+    max-width: 800px;
+    font-size: 1.4rem;
+  }
+</style>
+<title>Loops</title>
+</head>
+<body>
+<main>
+  <h2>While Loop</h2>
+  <script>
+    let i = 0;
+    while (i < 5) {
+      document.write(i);
+      document.write(' ');
+      i++;
+    }
+  </script>
+
+  <h2>Do While Loop</h2>
+  <script>
+    i = 1;
+    do {
+      document.write(i);
+      document.write(' ');
+      i++;
+    } while (i < 12);
+  </script>
+
+  <h2>For Loop</h2>
+  <script>
+    for (let i = 0; i < 5; i++) {
+      document.write(i);
+      document.write(' ');
+    }
+
+    document.write('<br><br>');
+
+    const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+    for (let i = 0; i < days.length; i++) {
+      document.write(days[i] + ' ');
+    }
+  </script>
+
+  <h2>For..of Loop</h2>
+  <script>
+    const fruits = ['Apples', 'Oranges', 'Bananas', 'Pears'];
+    for (const fr of fruits) {
+      document.write(fr);
+      document.write(' ');
+    }
+  </script>
+</main>
+</body>
+</html>

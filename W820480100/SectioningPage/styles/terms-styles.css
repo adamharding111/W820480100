@@ -1,0 +1,13 @@
+/* -- RUNNING TERMS STYLES -- */
+
+dl {
+  margin: auto;
+  width: 90%;
+}
+
+dl dt {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: bold;
+}
+

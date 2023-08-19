@@ -1,0 +1,38 @@
+div {
+  border: .3em solid purple;
+  padding: 1em;
+  text-align: center;
+}
+
+span {
+  border: .3rem solid gray;
+  color: white;
+  font-size: 3em;
+  font-family: monospace;
+  padding: .333em;
+  text-align: center;
+}
+
+#top-div {
+  background-color:red;
+}
+
+#mid-div {
+  background-color: green;
+}
+
+#bottom-div {
+  background-color: blue;
+}
+
+.left-span {
+  text-decoration: underline;
+}
+
+.mid-span {
+  font-weight: bold;
+}
+
+.right-span {
+  font-style: italic;
+}

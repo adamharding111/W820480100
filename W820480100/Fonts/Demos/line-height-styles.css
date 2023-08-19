@@ -1,0 +1,31 @@
+html {
+  font-size: 16px;
+}
+
+#normal {
+  line-height: normal;
+}
+
+#p1 {
+  line-height: 1;
+}
+
+#p2 {
+  line-height: 1.1;
+}
+
+#p3 {
+  line-height: 1.2;
+}
+
+#p4 {
+  line-height: 1.3;
+}
+
+#p5 {
+  line-height: 1.5;
+}
+
+#p6 {
+  line-height: 2;
+}

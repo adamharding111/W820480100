@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<script>
+  function toggleBgColor() {
+    if (document.body.style.backgroundColor === 'red') {
+      document.getElementById('btn-bg').innerHTML = 'Red';
+      document.body.style.backgroundColor = 'white';
+    } else {
+      document.getElementById('btn-bg').innerHTML = 'White';
+      document.body.style.backgroundColor = 'red';
+    }
+  }
+
+  window.addEventListener('load', (e)=> {
+    document.getElementById('btn-fly').style.left = '0px';
+    document.getElementById('btn-fly').style.position = 'relative';
+
+    document.getElementById('btn-bg').addEventListener('click', (e)=> {
+      toggleBgColor();
+    });
+    
+    let direction = -5;
+    document.getElementById('btn-fly').addEventListener('click', (e)=> {
+      document.getElementById('btn-switch-dir').disabled = false;
+      document.getElementById('btn-fly').disabled = true;
+      const target = e.target;
+      const timer = setInterval(function() {
+        const currentLeft = window.getComputedStyle(target).getPropertyValue('left');
+        const newLeft = String(parseInt(currentLeft) + direction) + 'px';
+        target.style.left = newLeft;
+        if (parseInt(currentLeft) < 0) {
+          document.getElementById('btn-fly').style.left = '5px';
+          direction = -direction;
+        } else if (parseInt(currentLeft) > 1000) {
+          document.getElementById('btn-fly').style.left = '995px';
+          direction = -direction;
+        }
+      }, 20);
+    })
+    
+    document.getElementById('btn-switch-dir').addEventListener('click', (e)=> {
+      direction = -direction;
+    })
+  })
+</script>
+<title>Button Buttons</title>
+</head>
+<body>
+<h1>Button Buttons</h1>
+<p>Click this button to change the background color:</p>
+<button type="button" id="btn-bg">Red</button>
+<hr>
+<p>Click this button to see it fly:</p>
+<button type="button" id="btn-fly">Fly</button>
+<hr>
+<p>Click this button to change the direction of the flying button:</p>
+<button type="button" id="btn-switch-dir" disabled>Switch Direction</button>
+</body>
+</html>

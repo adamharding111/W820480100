@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+  function addError(field) {
+    if (field.previousElementSibling &&
+      field.previousElementSibling.className === 'error') {
+      // error message already showing
+      return;
+    }
+    const error = document.createElement('div');
+    error.innerHTML = field.dataset.errorMsg;
+    error.className = 'error';
+    field.parentNode.insertBefore(error, field);
+  }
+  
+  function removeError(field) {
+    if (field.previousElementSibling &&
+      field.previousElementSibling.className === 'error') {
+      field.previousElementSibling.remove();
+    }
+  }
+
+  function checkField(field) {
+    if (!field.checkValidity()) {
+      addError(field);
+    } else {
+      removeError(field);
+    }
+  }
+
+  window.addEventListener('load', function(e) {
+    const form  = document.getElementById('my-form');
+    const answer = form.answer[0];
+    answer.dataset.errorMsg = 'Please answer the question.';
+
+    // Add click event handler to each radio button
+    for (let button of form.answer) {
+      button.addEventListener('click', function(e) {
+        checkField(answer);
+      });
+    }
+
+    form.addEventListener("submit", function(e) {
+      // Check errors
+      checkField(answer);
+
+      // If form is invalid, prevent submission
+      if (!form.checkValidity()) {
+        e.preventDefault();
+        alert('Please fix form errors.');
+      }
+    });
+  });
+</script>
+<title>Radio Buttons</title>
+</head>
+<body>
+<form id="my-form" method="post" novalidate>
+  <fieldset>
+    <legend>Question*:</legend>
+    <label>
+      <input type="radio" name="answer" value="1" required> A
+    </label>
+    <label>
+      <input type="radio" name="answer" value="2" required> B
+    </label>
+    <label>
+      <input type="radio" name="answer" value="3" required> C
+    </label>
+    <label>
+      <input type="radio" name="answer" value="4" required> D
+    </label>
+  </fieldset>
+  
+  <button>Submit</button>
+</form>
+</body>
+</html>

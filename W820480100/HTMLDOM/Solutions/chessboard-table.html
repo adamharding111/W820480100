@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+  window.addEventListener('load', function(e) {
+    const oddrows = document.querySelectorAll('tr.odd');
+    const evenrows = document.querySelectorAll('tr.even');
+    for (row of oddrows) {
+      const evencols = row.querySelectorAll('.even');
+      for (col of evencols) {
+        col.style.backgroundColor = 'black';
+      }
+    }
+    for (row of evenrows) {
+      const oddcols = row.querySelectorAll('.odd');
+      for (col of oddcols) {
+        col.style.backgroundColor = 'black';
+      }
+    }
+  });
+</script>
+<title>Chess Board Table</title>
+</head>
+<body>
+  <table id="board">
+    <tr class="odd">
+      <td class="odd"></td>
+      <td class="even"></td>
+      <td class="odd"></td>
+      <td class="even"></td>
+      <td class="odd"></td>
+      <td class="even"></td>
+      <td class="odd"></td>
+      <td class="even"></td>
+    </tr>
+    <tr class="even">
+      <td class="odd"></td>
+      <td class="even"></td>
+      <td class="odd"></td>
+      <td class="even"></td>
+      <td class="odd"></td>
+      <td class="even"></td>
+      <td class="odd"></td>
+      <td class="even"></td>
+    </tr>
+    <tr class="odd">
+      <td class="odd"></td>
+      <td class="even"></td>
+      <td class="odd"></td>
+      <td class="even"></td>
+      <td class="odd"></td>
+      <td class="even"></td>
+      <td class="odd"></td>
+      <td class="even"></td>
+    </tr>
+    <tr class="even">
+      <td class="odd"></td>
+      <td class="even"></td>
+      <td class="odd"></td>
+      <td class="even"></td>
+      <td class="odd"></td>
+      <td class="even"></td>
+      <td class="odd"></td>
+      <td class="even"></td>
+    </tr>
+    <tr class="odd">
+      <td class="odd"></td>
+      <td class="even"></td>
+      <td class="odd"></td>
+      <td class="even"></td>
+      <td class="odd"></td>
+      <td class="even"></td>
+      <td class="odd"></td>
+      <td class="even"></td>
+    </tr>
+    <tr class="even">
+      <td class="odd"></td>
+      <td class="even"></td>
+      <td class="odd"></td>
+      <td class="even"></td>
+      <td class="odd"></td>
+      <td class="even"></td>
+      <td class="odd"></td>
+      <td class="even"></td>
+    </tr>
+    <tr class="odd">
+      <td class="odd"></td>
+      <td class="even"></td>
+      <td class="odd"></td>
+      <td class="even"></td>
+      <td class="odd"></td>
+      <td class="even"></td>
+      <td class="odd"></td>
+      <td class="even"></td>
+    </tr>
+    <tr class="even">
+      <td class="odd"></td>
+      <td class="even"></td>
+      <td class="odd"></td>
+      <td class="even"></td>
+      <td class="odd"></td>
+      <td class="even"></td>
+      <td class="odd"></td>
+      <td class="even"></td>
+    </tr>
+  </table>
+</body>
+</html>

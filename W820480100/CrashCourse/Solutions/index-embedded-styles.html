@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../normalize.css" rel="stylesheet">
+<title>Home Run Hitters</title>
+<style>
+  body {
+    background-attachment: fixed;
+    background-image: url(images/baseball.png);
+    background-position: bottom;
+    background-repeat: repeat-x;
+  }
+  
+  table {
+    background-color: white;
+    border-collapse: collapse;
+    margin: auto;
+    min-width: 800px;
+  }
+  
+  caption {
+    font-style: italic;
+  }
+  
+  thead {
+    background-color: darkblue;
+    color: white;
+  }
+  
+  td,
+  th {
+    border: 1px solid orange;
+    margin: 0;
+    padding: .3em;
+  }
+  
+  tfoot td {
+    background-color: silver;
+    border-top: 2px solid black;
+    font-weight: bold;
+  }
+  
+  .steroids-era {
+    font-style: italic;
+  }
+  
+  #key {
+    background-color: lightgray;
+    font-style: italic;
+  }
+  
+  tr td:nth-child(2) {
+    text-align: center;
+  }
+  
+  .steroids-era td:first-child::after {
+    content: '*';
+  }
+</style>
+</head>
+<body class="webucator">
+  <table>
+    <caption>All-time Home Run Records</caption>
+    <thead>
+      <tr>
+        <th>Player</th>
+        <th>Home Runs</th>
+        <th>Team</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="steroids-era">
+        <td>Barry Bonds</td>
+        <td>762</td>
+        <td>Giants</td>
+      </tr>
+      <tr>
+        <td>Hank Aaron</td>
+        <td>755</td>
+        <td>Braves</td>
+      </tr>
+      <tr>
+        <td>Babe Ruth</td>
+        <td>714</td>
+        <td>Yankees</td>
+      </tr>
+      <tr class="steroids-era">
+        <td>Alex Rodriguez</td>
+        <td>696</td>
+        <td>Yankees</td>
+      </tr>
+      <tr>
+        <td>Albert Pujols</td>
+        <td>679</td>
+        <td>Dodgers</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+          <td>Totals</td>
+          <td>3,606</td>
+          <td>N/A</td>
+      </tr>
+      <tr>
+        <td colspan="3" id="key">*Steroids Era</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>

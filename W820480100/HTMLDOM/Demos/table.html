@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+function addRow(tbodyId, cells) {
+  // Get the tbody and insert a new row
+  const tbody = document.getElementById(tbodyId);
+  const newRow = tbody.insertRow();
+
+  // Insert cells based on passed-in cells array
+  for (const cellText of cells) {
+    cell = newRow.insertCell();
+    cell.innerHTML = cellText;
+  }
+
+  // Insert a final cell with a Delete button
+  newCell = newRow.insertCell();
+  const btnDelete = document.createElement('button');
+  btnDelete.innerHTML = 'X';
+  btnDelete.addEventListener('click', function(e) {
+    btnDelete.parentNode.parentNode.remove();
+  });
+  newCell.appendChild(btnDelete);
+}
+
+function deleteAllRows(tbodyId) {
+  const tbody = document.getElementById(tbodyId);
+  while (tbody.rows.length > 0) {
+    tbody.deleteRow(0);
+  }
+}
+
+function prepareCells(fName, lName) {
+  //Create a cells array to pass to the 
+  const cells = [fName.value, lName.value];
+  addRow('people', cells);
+  fName.value = '';
+  lName.value = '';
+  fName.focus();
+}
+
+window.addEventListener('load', function() {
+  const btnAdd = document.getElementById("btn-add");
+  const btnDeleteAll = document.getElementById("btn-delete-all");
+  const fName = document.getElementById('firstname');
+  const lName = document.getElementById('lastname');
+
+  btnAdd.addEventListener('click', function() {
+    prepareCells(fName, lName);
+  });
+
+  lName.addEventListener('keyup',function(e) {
+    if (e.key === 'Enter') {
+      prepareCells(fName, lName);
+    }
+  });
+
+  btnDeleteAll.addEventListener('click', function() {
+    deleteAllRows('people');
+  });
+
+  fName.focus();
+});
+</script>
+<title>Manipulating Tables</title>
+</head>
+<body id="table-demo">
+<main>
+<table>
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Admin</th>
+    </tr>
+  </thead>
+  <tbody id="people"></tbody>
+  <tbody>
+    <tr>
+      <td><input id="firstname" placeholder="First Name"></td>
+      <td><input id="lastname" placeholder="Last Name"></td>
+      <td><button type="button" id="btn-add">+</button></td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th colspan="2">Delete all people:</th>
+      <td><button type="button" id="btn-delete-all">-</button></td>
+    </tr>
+  </tfoot>
+</table>
+</main>
+</body>
+</html>

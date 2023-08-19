@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<title>String</title>
+</head>
+<body>
+<main>
+  <script>
+    const myStr = prompt("Enter a word:", "");
+
+    document.write("String: " + myStr);
+    document.write("<hr>");
+    document.write("length: ");
+    document.write(myStr.length);
+    document.write("<hr>");
+    document.write("charAt(4): ");
+    document.write(myStr.charAt(4));
+    document.write("<hr>");
+    document.write("indexOf('cat'): ");
+    document.write(myStr.indexOf('cat'));
+    document.write("<hr>");
+    document.write("indexOf('dog'): ");
+    document.write(myStr.indexOf('dog'));
+    document.write("<hr>");
+    document.write("lastIndexOf('cat'): ");
+    document.write(myStr.lastIndexOf('cat'));
+    document.write("<hr>");
+    document.write("substring(4): ");
+    document.write(myStr.substring(4));
+    document.write("<hr>");
+    document.write("substring(4,7): ");
+    document.write(myStr.substring(4,7));
+    document.write("<hr>");
+    document.write("toLowerCase(): ");
+    document.write(myStr.toLowerCase());
+    document.write("<hr>");
+    document.write("toUpperCase(): ");
+    document.write(myStr.toUpperCase());
+    document.write("<hr>");
+    document.write("trim(): ");
+    document.write(myStr.trim());
+    document.write("<hr>");
+
+    console.log(myStr.split(','));
+  </script>
+</main>
+</body>
+</html>

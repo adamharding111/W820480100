@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+  function setColors() {
+    const firstParagraph = document.querySelector("p");
+    firstParagraph.style.backgroundColor='red';
+    const spanText = document.querySelector("span");
+    spanText.style.backgroundColor='lightblue';
+    const firstListItem = document.querySelector("li");
+    firstListItem.style.backgroundColor='green';
+    const listItemClassSpecial = document.querySelector("li.special");
+    listItemClassSpecial.style.backgroundColor='pink';
+  }
+</script>
+<title>querySelector()</title>
+</head>
+<body onload="setColors();">
+<main>
+  <p>This is the first paragraph.</p>
+  <p>
+    This is the second paragraph.
+    <span>This text is wrapped in a span tag.</span>
+    And this is more text in the second paragraph.
+  </p>
+  <ul>
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li class="special">List item 3</li>
+    <li>List item 4</li>
+  </ul>
+</main>
+</body>
+</html>

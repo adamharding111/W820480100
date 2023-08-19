@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<title>Phone Converter</title>
+<script>
+function cleanPhone(phone, pattern) {
+  const cleanedPhone = phone.replace(pattern, "($1) $2-$3");
+  return cleanedPhone;
+}
+
+function convertPhone(phone) {
+  const rePhone = /^\(?(\d{3})\)?[\-\. ]?([A-Za-z\d]{3})[\-\. ]?([A-Za-z\d]{4})/;
+  if (!rePhone.test(phone.value)) {
+    alert("INVALID PHONE");
+    return phone.value;
+  }
+  let convertedPhone = phone.value.replace(/[^A-Za-z\d]/g, "");
+  convertedPhone = convertedPhone.replace(/[ABC]/gi, "2");
+  convertedPhone = convertedPhone.replace(/[DEF]/gi, "3");
+  convertedPhone = convertedPhone.replace(/[GHI]/gi, "4");
+  convertedPhone = convertedPhone.replace(/[JKL]/gi, "5");
+  convertedPhone = convertedPhone.replace(/[MNO]/gi, "6");
+  convertedPhone = convertedPhone.replace(/[PQRS]/gi, "7");
+  convertedPhone = convertedPhone.replace(/[TUV]/gi, "8");
+  convertedPhone = convertedPhone.replace(/[WXYZ]/gi, "9");
+  phone.value = convertedPhone.substring(0, 10);
+
+  return cleanPhone(phone.value, rePhone);
+}
+
+window.addEventListener('load', function(e) {
+  const btn = document.getElementById('clean');
+  const phone = document.getElementById('phone');
+  btn.addEventListener('click', function(e) {
+    phone.value = convertPhone(phone);
+    e.preventDefault(); // prevent form submission
+  });
+});
+</script>
+</head>
+<body>
+  <form novalidate>
+    <input type="tel" id="phone" name="phone" size="20">
+    <button id="clean">Clean Phone</button>
+  </form>
+</body>
+</html>

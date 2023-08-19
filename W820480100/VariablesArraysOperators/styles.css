@@ -1,0 +1,14 @@
+main {
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+p, ul {
+  font-size: 16pt;
+}
+
+button {
+  font-size: 16pt;
+  margin: 10px;
+  width: 100%;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+   function addError(field) {
+    if (field.previousElementSibling &&
+      field.previousElementSibling.className === 'error') {
+      // error message already showing
+      return;
+    }
+    const error = document.createElement('div');
+    error.innerHTML = field.dataset.errorMsg;
+    error.className = 'error';
+    field.parentNode.insertBefore(error, field);
+  }
+  
+  function removeError(field) {
+    // to do
+  }
+
+  function checkField(field) {
+    if (!field.checkValidity()) {
+      addError(field);
+    } else {
+      removeError(field);
+    }
+  }
+
+  window.addEventListener('load', function(e) {
+    const form  = document.getElementById('my-form');
+    const textField = form.textfield;
+    textField.dataset.errorMsg = 'Your entry must be between ' +
+    textField.minLength + ' and ' + textField.maxLength + 
+    ' characters.';
+    const emailField = form.emailfield;
+    emailField.dataset.errorMsg = 'You must enter a valid email.';
+    const urlField = form.urlfield;
+    urlField.dataset.errorMsg = 'The URL must begin with "https".';
+
+    textField.addEventListener('input', function(e) {
+      checkField(textField);
+    });
+
+    emailField.addEventListener('input', function(e) {
+      checkField(emailField);
+    });
+
+    urlField.addEventListener('input', function(e) {
+      checkField(urlField);
+    });
+
+    form.addEventListener('submit', function(e) {
+      // Check errors
+      checkField(textField);
+      checkField(emailField);
+      checkField(urlField);
+
+      // If form is invalid, prevent submission
+      if (!form.checkValidity()) {
+        e.preventDefault();
+        alert('Please fix form errors.');
+      }
+    });
+  });
+</script>
+<title>Text-like Fields</title>
+</head>
+<body>
+<form id="my-form" method="post" novalidate>
+  <label for="textfield">Text field*:</label>
+  <input type="text" id="textfield" name="textfield" 
+    required minlength="5" maxlength="10">
+  <label for="emailfield">Email field*:</label>
+  <input type="email" id="emailfield" name="emailfield" required>
+  <label for="urlfield">URL field:</label>
+  <input type="url" id="urlfield" name="urlfield" pattern="https:.*">
+  
+  <button>Submit</button>
+</form>
+</body>
+</html>

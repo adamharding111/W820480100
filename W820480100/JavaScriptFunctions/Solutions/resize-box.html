@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+function resizeBox(change=10) {
+  const box = document.getElementById('box');
+  const w = box.style.width;
+  const h = box.style.height;
+  const wNew = parseInt(w) + change;
+  const hNew = parseInt(h) + change;
+  box.style.width = wNew + 'px';
+  box.style.height = hNew + 'px';
+}
+</script>
+<title>Resize Box</title>
+</head>
+<body id="resize-box">
+<main>
+  <div id="box" style="width:100px; height:100px;"></div>
+  <button onclick="resizeBox(-10)">SHRINK</button>
+  <button onclick="resizeBox(10)">GROW</button>
+</main>
+</body>
+</html>

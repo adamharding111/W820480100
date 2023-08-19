@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+  function doMath(operator) {
+    const n1 = parseFloat(document.getElementById('n1').value);
+    const n2 = parseFloat(document.getElementById('n2').value);
+    let result;
+    switch (operator) {
+      case "+":
+        result = n1 + n2;
+        break;
+      case "-":
+        result = n1 - n2;
+        break;
+      case "*":
+        result = n1 * n2;
+        break;
+      case "/":
+        result = n1 / n2;
+        break;
+      default:
+        alert("Bad operator");
+    }
+    alert(n1 + operator + n2 + '=' + result);
+  }
+</script>
+<title>doMath</title>
+</head>
+<body>
+<main>
+  <label for="n1">First Number:</label>  <input id="n1">
+  <label for="n2">Second Number:</label>  <input id="n2">
+  <button onclick="doMath('+')">Add</button>
+  <button onclick="doMath('-')">Subtract</button>
+  <button onclick="doMath('*')">Multiply</button>
+  <button onclick="doMath('/')">Divide</button>
+</main>
+</body>
+</html>

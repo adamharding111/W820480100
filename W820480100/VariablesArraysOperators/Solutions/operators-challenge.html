@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+  const userNum1 = prompt("Choose a number.", "");
+  alert("You chose " + userNum1);
+  const userNum2 = prompt("Choose another number.", "");
+  alert("You chose " + userNum2);
+  const numsAdded = userNum1 + userNum2;
+  const numsSubtracted = userNum1 - userNum2;
+  const numsMultiplied = userNum1 * userNum2;
+  const numsDivided = userNum1 / userNum2;
+  const numsModulused = userNum1 % userNum2;
+</script>
+<title>JavaScript Operators</title>
+</head>
+<body>
+<main>
+<ul>
+  <script>
+    document.write("<li>" + userNum1 + " + " + userNum2 + " = ");
+    document.write(numsAdded + "</li>");
+    document.write("<li>" + userNum1 + " - " + userNum2 + " = ");
+    document.write(numsSubtracted + "</li>");
+    document.write("<li>" + userNum1 + " * " + userNum2 + " = ");
+    document.write(numsMultiplied + "</li>");
+    document.write("<li>" + userNum1 + " / " + userNum2 + " = ");
+    document.write(numsDivided + "</li>");
+    document.write("<li>" + userNum1 + " % " + userNum2 + " = ");
+    document.write(numsModulused + "</li>");
+  </script>
+</ul>
+</main>
+</body>
+</html>

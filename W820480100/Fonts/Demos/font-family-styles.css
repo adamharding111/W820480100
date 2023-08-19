@@ -1,0 +1,19 @@
+#cursive-div {
+  font-family: 'Cool Linked Font', cursive;
+}
+
+#fantasy-div {
+  font-family: 'Cool Linked Font', fantasy;
+}
+
+#monospace-div {
+  font-family: 'Courier New', monospace;
+}
+
+#sans-serif-div {
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+}
+
+#serif-div {
+  font-family: Times, 'Times New Roman', Georgia, serif;
+}

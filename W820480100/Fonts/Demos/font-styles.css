@@ -1,0 +1,18 @@
+#div1 h1 {
+  font: italic small-caps bold 2em Georgia, Times, 
+  'Times New Roman', sans-serif;
+}
+
+#div1 p {
+  font: 1em/1.2 Arial, Helvetica, sans-serif;
+}
+
+#div2 h1 {
+  font-style: italic; /* gets overridden */ 
+  font-variant: small-caps; /* gets overridden */
+  font: 2.5em 'Gill Sans', serif;
+}
+
+#div2 p {
+  font: 0.9em/1.5 cursive;
+}

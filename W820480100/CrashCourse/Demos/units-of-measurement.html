@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../normalize.css" rel="stylesheet">
+<title>Units of Measurement</title>
+<script>
+  window.addEventListener('load', (e) => {
+    var unitSize = document.getElementById('unit-size');
+    unitSize.addEventListener('change', (e) => {
+      var divs = document.querySelectorAll('div');
+      for (var div of divs) {
+      div.style.width = unitSize.value + div.id;
+      }
+    });
+    var fontSize = document.getElementById('font-size');
+    fontSize.addEventListener('change', (e) => {
+      var tds = document.querySelectorAll('td');
+      for (var td of tds) {
+      td.style.fontSize = fontSize.value + 'px';
+      }
+    });
+    var percentage = document.getElementById('percentage');
+    percentage.addEventListener('change', (e) => {
+      var inner = document.getElementById('inner');
+      inner.style.height = percentage.value + '%';
+      inner.style.width = percentage.value + '%';
+      outer.style.width = percentage.value + '%';
+    });    
+  })
+</script>
+<style>
+label {
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+#font-size,
+#percentage,
+#unit-size {
+  width: 55px;
+}
+
+div {
+  background-color: darkred;
+  border-top: 1px dashed black;
+  border-bottom: 1px dashed black;
+  height: 10px;
+}
+
+#outer {
+  background-color: darkblue;
+  height: 50px;
+  margin-top: .5rem;
+  width: 50%;
+}
+
+#inner {
+  background-color: rgba(255,255,0,.5);
+  height: 50%;
+  margin: auto;
+  width: 50%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid gray;
+  padding: 4px;
+}
+
+td:first-child {
+  width: 220px;
+}
+
+td:nth-child(2) {
+  width: 50px;
+}
+
+th {
+  padding-left: 5px;
+  padding-right: 15px;
+  text-align: left;
+}
+
+#px {
+  width: 5px;
+}
+
+#q {
+  width: 5q;
+}
+
+#mm {
+  width: 5mm;
+}
+
+#cm {
+  width: 5cm;
+}
+
+#pc {
+  width: 5pc;
+}
+
+#pt {
+  width: 5pt;
+}
+
+#in {
+  width: 5in;
+}
+
+#em {
+  width: 5em;
+}
+
+#ex {
+  width: 5ex;
+}
+
+#ch {
+  width: 5ch;
+}
+
+#rem {
+  width: 5rem;
+}
+
+#vw {
+  width: 5vw;
+}
+
+#vh {
+  width: 5vh;
+}
+
+#vmin {
+  width: 5vmin;
+}
+
+#vmax {
+  width: 5vmax;
+}
+
+.relative-to-font,
+#font-size {
+  background-color: #ff6;
+}
+</style>
+</head>
+<body class="webucator">
+  <h1>Units of Measurement</h1>
+  <label for="unit-size">Unit Size:</label>
+  <input type="number" min="0" step=".1" value="5" id="unit-size">
+  <label for="font-size">Font Size:</label>
+  <input type="number" min="0" step="1" value="16" id="font-size">
+  <h2>Relative Units</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Unit</th>
+        <th>Abbr</th>
+        <th>Length</th>
+        <th>To Change</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="relative-to-font">
+        <td>Width of capital M</td>
+        <td>em</td>
+        <td><div id="em"></div>M</td>
+        <td>Change font size.</td>
+      </tr>
+      <tr class="relative-to-font">
+        <td>Height of lowercase x</td>
+        <td>ex</td>
+        <td><div id="ex"></div>x</td>
+        <td>Change font size.</td>
+      </tr>
+      <tr class="relative-to-font">
+        <td>Width of the number 0</td>
+        <td>ch</td>
+        <td><div id="ch"></div>0</td>
+        <td>Change font size.</td>
+      </tr>
+      <tr>
+        <td>Root em</td>
+        <td>rem</td>
+        <td><div id="rem"></div></td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td>1/100<sup>th</sup> of Width of Viewport</td>
+        <td>vw</td>
+        <td><div id="vw"></div></td>
+        <td>Change width of browser window.</td>
+      </tr>
+      <tr>
+        <td>1/100<sup>th</sup> of Height of Viewport</td>
+        <td>vh</td>
+        <td><div id="vh"></div></td>
+        <td>Change height of browser window.</td>
+      </tr>
+      <tr>
+        <td>1/100<sup>th</sup> of Viewport's Smaller Dimension</td>
+        <td>vmin</td>
+        <td><div id="vmin"></div></td>
+        <td>Change height or width of browser window.</td>
+      </tr>
+      <tr>
+        <td>1/100<sup>th</sup> of Viewport's Larger Dimension</td>
+        <td>vmax</td>
+        <td><div id="vmax"></div></td>
+        <td>Change height or width of browser window.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h2>Absolute Units</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Unit</th>
+        <th>Abbr</th>
+        <th>Length</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Pixels</td>
+        <td>px</td>
+        <td><div id="px"></div></td>
+      </tr>
+      <tr>
+        <td>Quarter millimeters</td>
+        <td>q</td>
+        <td><div id="q"></div></td>
+      </tr>
+      <tr>
+        <td>Millimeters</td>
+        <td>mm</td>
+        <td><div id="mm"></div></td>
+      </tr>
+      <tr>
+        <td>Centimeters</td>
+        <td>cm</td>
+        <td><div id="cm"></div></td>
+      </tr>
+      <tr>
+        <td>Picas</td>
+        <td>pc</td>
+        <td><div id="pc"></div></td>
+      </tr>
+      <tr>
+        <td>Points</td>
+        <td>pt</td>
+        <td><div id="pt"></div></td>
+      </tr>
+      <tr>
+        <td>Inches</td>
+        <td>in</td>
+        <td><div id="in"></div></td>
+      </tr>
+    </tbody>
+  </table>
+  <h2>Percentage</h2>
+  <input type="number" value="50" id="percentage">
+  <div id="outer">
+    <div id="inner"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+main {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+p {
+  text-align: center;
+  font-size: 16pt;
+}
+
+/* Getting Elements */
+
+div#board {
+  width:306px;
+  margin:auto;
+}
+
+div.row {
+  height:100px;
+}
+
+div.col {
+  float:left;
+  width:100px;
+  height:100px;
+  border:1px solid black;
+  text-align:center;
+  font-size:xx-large;
+}
+
+div.col:first-child {
+  clear:both;
+}
+
+/* Chess Board */
+
+td {
+  height: 60px;
+  width: 60px;
+  border: 1px solid silver;
+}
+
+/* Form Demo */
+form {
+  width: 200px;
+  margin: 10px auto;
+}
+
+/* Element Hierarchy Demo */
+
+#btn-go {
+  width: 100%;
+  margin: 10px;
+}
+
+/* Attributes Demo */
+
+#google {
+  margin-left:100px;
+  box-sizing: border-box;
+}
+
+/* Focus Demo */
+
+#search,
+#btn-search {
+  box-sizing: border-box;
+  font-size: x-large;
+  margin: 5px;
+  width:100%;
+}
+
+/* Form Demo */
+
+#table-demo main {
+  font-size: 16pt;
+  max-width: 600px;
+}
+
+#table-demo td {
+  border: none;
+  height: initial;
+  padding-right: 10px;
+  text-align: left;
+  width: initial;
+}
+
+#table-demo thead th {
+  text-align: left;
+}
+
+#table-demo tfoot th {
+  text-align: right;
+}
+
+#table-demo button,
+#table-demo input {
+  font-size: 16pt;
+  width: 100%;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+  const userName = prompt("What's your name?");
+  const age1 = prompt('How old were you when you first used a computer?');
+  const age2 = prompt('How old are you now?');
+  const diff = parseFloat(age2) - parseFloat(age1);
+</script>
+<title>JavaScript Built-in Functions</title>
+</head>
+<body>
+<main>
+  <p>
+  <script>
+    document.write(userName + ', you have used '
+                  +'computers for ' + diff + ' years.');
+  </script>
+  </p>
+</main>
+</body>
+</html>

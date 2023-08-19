@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Registration Form</title>
+</head>
+<body>
+<h1>Registration Form</h1>
+<form method="post"
+      action="https://www.webucator.com/materials/htm101/">
+<input type="hidden" name="secretcode" id="secretcode" value="42">
+<div>
+  <label for="username">Username:</label>
+  <input type="text" name="username" id="username" size="15">
+</div>
+<div>
+  <label for="pw">Password:</label>
+  <input type="password" name="pw" id="pw" size="15">
+</div>
+<div>
+  <label for="pw2">Repeat Password:</label>
+  <input type="password" name="pw2" id="pw2" size="15">
+</div>
+<div>
+  <label for="referral">Where did you hear about us?</label>
+  <select name="referral" id="referral">
+    <option value="0">--Please choose--</option>
+    <optgroup label="Search Engine">
+      <option value="Google">Google</option>
+      <option value="Bing">Bing</option>
+      <option value="Yahoo">Yahoo!</option>
+      <option value="OtherSearchEngine">Other</option>
+    </optgroup>
+    <option value="wom">Word of Mouth</option>
+    <option value="other">Other</option>
+  </select>
+</div>
+<div>
+<fieldset>
+  <legend>Dominant Hand:</legend>
+  <label>
+    <input type="radio" name="dom-hand" id="hand-right" value="right">
+    Right
+  </label>
+  <label>
+    <input type="radio" name="dom-hand" id="hand-left" value="left">
+    Left
+  </label>
+</fieldset>
+</div>
+<div>
+  <label for="comments">Comments:</label><br>
+  <textarea name="comments" id="comments"
+    cols="40" rows="4"></textarea>
+</div>
+<div>
+  <input type="checkbox" name="terms" id="terms" required>
+  <label for="terms">Check to accept our terms.</label>
+</div>
+<div>
+  <input type="submit" name="submitbutton" id="submitbutton"
+    value="Register">
+  <input type="reset" name="resetbutton" id="resetbutton">
+</div>
+</form>
+</body>
+</html>

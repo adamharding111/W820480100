@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+  function changeBg(colorOrEvent) {
+    let color = 'white'; // default
+    if ( typeof colorOrEvent === 'string' ) {
+      color = colorOrEvent;
+    } else {
+      color = colorOrEvent.currentTarget.id;
+    }
+    document.body.style.backgroundColor = color;
+  }
+  
+  function changeBgWhite(e) {
+    changeBg('white');
+  }
+
+  window.addEventListener('load', function() {
+    const btnRed = document.getElementById('red');
+    const btnGreen = document.getElementById('green');
+    const btnOrange = document.getElementById('orange');
+    const lnkPink = document.getElementById('pink');
+
+    btnRed.addEventListener('click', changeBg);
+    btnGreen.addEventListener('dblclick', changeBg);
+    btnOrange.addEventListener('mousedown', changeBg);
+    btnOrange.addEventListener('mouseup', changeBgWhite);
+    lnkPink.addEventListener('mouseover', changeBg);
+    lnkPink.addEventListener('mouseout', changeBgWhite);
+
+    document.addEventListener('keyup', changeBgWhite);
+  });
+</script>
+<title>Color Changer</title>
+</head>
+<body>
+<main>
+  <button id="red">
+    Click to turn the page red.
+  </button>
+  <button id="green">
+    Double-click to turn the page green.
+  </button>
+  <button id="orange">
+    Click and hold to turn the page orange.
+  </button>
+  <a href="#" id="pink">Hover over to turn page pink.</a>
+</main>
+</body>
+</html>

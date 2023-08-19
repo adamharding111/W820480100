@@ -1,0 +1,52 @@
+.container {
+  font-family: sans-serif, "Helvetica Neue", "Lucida Grande", Arial;
+  font-size: 2em;
+}
+
+.ultra-condensed {
+  font-stretch: ultra-condensed; /* Same as 50% */
+}
+
+.extra-condensed {
+  font-stretch: extra-condensed; /* Same as 62.5% */
+}
+
+.condensed {
+  font-stretch: condensed; /* Same as 75% */
+}
+
+.semi-condensed {
+  font-stretch: semi-condensed; /* Same as 87.5% */
+}
+
+.normal {
+  font-stretch: normal; /* Same as 100% */
+}
+
+.semi-expanded {
+  font-stretch: semi-expanded; /* Same as 112.5% */
+}
+
+.expanded {
+  font-stretch: expanded; /* Same as 125% */
+}
+
+.extra-expanded {
+  font-stretch: extra-expanded; /* Same as 150% */
+}
+
+.ultra-expanded {
+  font-stretch: ultra-expanded; /* Same as 200% */
+}
+
+.fifty {
+  font-stretch: 50%; /* Same as ultra-condensed */
+}
+
+.hundred {
+  font-stretch: 100%; /* Same as normal */
+}
+
+.two-hundred {
+  font-stretch: 200%; /* Same as ultra-expanded */
+}

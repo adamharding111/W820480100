@@ -1,0 +1,31 @@
+#keyword {
+  color: red;
+}
+
+#rgb-longhand {
+  color: #ff0000;
+}
+
+#rgb-shorthand {
+  color: #f00;
+}
+
+#rgb-function-numbers {
+  color: rgb(255, 0, 0);
+}
+
+#rgb-function-percentage {
+  color: rgb(100%, 0%, 0%);
+}
+
+#rgba {
+  color: rgba(255, 0, 0, 0.5);
+}
+
+#hsl-function {
+  color: hsl(0, 100%, 50%);
+}
+
+#hsla {
+  color: hsla(0, 100%, 50%, 50%);
+}

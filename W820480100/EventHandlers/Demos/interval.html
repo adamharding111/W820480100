@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+  // Create global interval and color variables
+  let interval;
+  let color = 'white';
+
+  function startTogglingBg() {
+    interval = setInterval(function() {
+      if (color === 'white') {
+        color = 'red';
+      } else {
+        color = 'white';
+      }
+      document.body.style.backgroundColor=color;
+    }, 500);
+  }
+  
+  function stopTogglingBg() {
+    clearInterval(interval);
+  }
+
+  window.addEventListener('load', function() {
+    btnStart = document.getElementById('start');
+    btnStop = document.getElementById('stop');
+
+    btnStart.addEventListener('click', startTogglingBg);
+    btnStop.addEventListener('click', stopTogglingBg);
+  });
+</script>
+<title>Timer</title>
+</head>
+<body>
+<main>
+  <button id="start">Start</button>
+  <button id="stop">Stop</button>
+</main>
+</body>
+</html>

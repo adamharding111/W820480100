@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+  // Global variable containing time passed
+  let timePassed = 0;
+
+  function checkSentence(sentence, entry) {
+    const msg = document.getElementById('message');
+    if (sentence === entry) {
+      msg.innerHTML = 'You finished in ' + timePassed + ' seconds';
+      return true;
+    }
+    timePassed += .1;
+    timePassed = parseFloat(timePassed.toFixed(1));
+    msg.innerHTML = timePassed + ' seconds';
+    return false;
+  }
+
+  window.addEventListener('load', function() {
+    const sentence = document.getElementById('sentence').innerHTML;
+    const entryField = document.getElementById('entry');
+
+    entryField.addEventListener('focus', function() {
+      const interval = setInterval(function() {
+        const result = checkSentence(sentence, entryField.value);
+        if (result) {
+          clearInterval(interval);
+        }
+      }, 100);
+    });
+  });
+</script>
+<title>Typing Test</title>
+</head>
+<body id="typing-test">
+<main>
+  <div id="container">
+    <p id="sentence">The quick brown fox jumps over the lazy dog.</p>
+    <input id="entry" placeholder="Click to start timer.">
+    <p id="message">0 seconds</p>
+  </div>
+</main>
+</body>
+</html>
